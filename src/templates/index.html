@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> My Blog </title>
+    </head>
+    <body>
+
+        <h3> Καλημέρα
+        
+            {% if myname and myname != 'Panteli' %}
+
+              {{ myname }}
+
+            {% elif myname == 'Panteli'  %}
+
+                Παντελή
+
+            {% else %}
+
+                σε όλους
+
+            {% endif %}
+       
+        </h3>
+
+    </body>
+</html>
