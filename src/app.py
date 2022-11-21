@@ -17,7 +17,7 @@ def books():
         jdict = json.load(json_file)
         print(jdict)
 
-    return render_template("books.html")
+    return render_template("books.html") 
 
 
 if __name__ == "__main__":
