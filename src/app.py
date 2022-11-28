@@ -12,12 +12,11 @@ def root(name=None):
 
 @app.route("/books")
 def books():
-
     with open("mybooks.json") as json_file:
         jdict = json.load(json_file)
         print(jdict)
 
-    return render_template("books.html") 
+    return render_template("books.html", jdict=jdict) 
 
 
 
