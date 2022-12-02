@@ -9,8 +9,13 @@
 
 
 {% block content %}
-   <h1> εδω θα μπει η λιστα των βιβλίων </h1>
+   <h1> Λίστα βιβλίων </h1>
 
-    {{ jdict }}
+    {% for book in jdict %}
+        {{ book.Title }} <br>
+    {% endfor %}
+    
 
 {% endblock content %}
+
+
