@@ -1,9 +1,13 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title> My Blog </title>
-    </head>
-    <body>
+{% extends "base.html" %}
+
+       
+    
+    {% block title %}
+    
+    My Blog
+    
+    {% endblock title %}
+    {% block content %}
 
         <h3> Καλημέρα
         
@@ -24,5 +28,4 @@
        
         </h3>
 
-    </body>
-</html>
+{% endblock content %}
