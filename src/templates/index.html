@@ -1,33 +1,29 @@
 {% extends "base.html" %}
 
-       
+           
+{% block title %}
+  
+  My Blog
     
-    {% block title %}
-    
-    My Blog
-    
-    {% endblock title %}
+{% endblock title %}
     
     
-    {% block content %}
-
-        <h3> Καλημέρα
+{% block content %}
+    <h3> Καλημέρα
         
-            {% if myname and myname != 'Panteli' %}
+        {% if myname and myname != 'Panteli' %}
 
-              {{ myname }}
+        {{ myname }}
               
+        {% elif myname == 'Panteli'  %}
 
-            {% elif myname == 'Panteli'  %}
+            Παντελή
+    
+        {% else %}
+            
+            σε όλους
 
-                Παντελή
-
-            {% else %}
-
-                σε όλους
-
-            {% endif %}
-       
-        </h3>
+        {% endif %}     
+    </h3>
 
 {% endblock content %}
