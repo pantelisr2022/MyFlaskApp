@@ -1,21 +1,35 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 import json
 
 
 app = Flask(__name__)
 
+
 @app.route("/index/")
 @app.route("/")
-@app.route("/<name>")
-def root(name=None):
-    return render_template("index.html", myname=name)
+def root():
+    return render_template("index.html")
 
-@app.route("/books")
-def books():
-    with open("mybooks.json") as json_file:
-        jdict = json.load(json_file)
 
-    return render_template("books.html", jdict=jdict) 
+@app.route("/signup/")
+def signup():
+    render_template("signup.html")
+
+
+@app.route("/login/")
+def login():
+    render_template("login.html")
+
+
+@app.route("/logout/")
+def logout():
+    return redirect(url_for("root"))
+
+
+@app.route("/new_aricle/")
+def new_article():
+    render_template("new_article.html")
+
 
 
 
