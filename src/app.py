@@ -13,12 +13,12 @@ def root():
 
 @app.route("/signup/")
 def signup():
-    render_template("signup.html")
+    return render_template("signup.html")
 
 
 @app.route("/login/")
 def login():
-    render_template("login.html")
+    return render_template("login.html")
 
 
 @app.route("/logout/")
@@ -26,9 +26,9 @@ def logout():
     return redirect(url_for("root"))
 
 
-@app.route("/new_aricle/")
+@app.route("/new_article/")
 def new_article():
-    render_template("new_article.html")
+    return render_template("new_article.html")
 
 
 
